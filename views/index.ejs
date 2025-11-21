@@ -113,5 +113,22 @@
     </footer>
 
   </div>
+<script>
+  function refreshCounts() {
+    fetch("/api/links")
+      .then(res => res.json())
+      .then(data => {
+        data.forEach(link => {
+          const el = document.getElementById("clicks-" + link.id);
+          if (el) el.textContent = link.clicks;
+        });
+      })
+      .catch(err => console.error("Error updating counts:", err));
+  }
+
+  // Auto update every 2 seconds
+  setInterval(refreshCounts, 2000);
+</script>
+
 </body>
 </html>
