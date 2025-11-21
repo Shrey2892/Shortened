@@ -100,10 +100,12 @@
           <button 
   class="btn-copy"
   type="button"
-  onclick="copyToClipboard('<%= base %>/<%= link.slug %>', this)"
+  data-url="<%= base %>/<%= link.slug %>"
+  onclick="copyToClipboard(this)"
 >
   Copy
 </button>
+
 
 
           <form action="/delete/<%= link.id %>" method="POST">
@@ -123,7 +125,9 @@
   </div>
 
 <script>
-function copyToClipboard(text, btn) {
+function copyToClipboard(btn) {
+  const text = btn.getAttribute("data-url");
+
   navigator.clipboard.writeText(text)
     .then(() => {
       btn.textContent = "Copied!";
@@ -135,11 +139,12 @@ function copyToClipboard(text, btn) {
       }, 1500);
     })
     .catch(err => {
-      console.error("Copy failed", err);
-      alert("Failed to copy!");
+      console.error("Clipboard failed:", err);
+      alert("Failed to copy. Try manually.");
     });
 }
 </script>
+
 
 </body>
 </html>
