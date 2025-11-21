@@ -26,26 +26,23 @@ app.get("/", async (req, res) => {
 // 2️⃣ SHORTEN URL
 // ---------------------------
 app.post("/shorten", async (req, res) => {
-    const { url, customSlug, title } = req.body;
+  const { url, customSlug, title } = req.body;
+  const slug = customSlug || nanoid(6);
 
-    if (!url) {
-        return res.status(400).send("URL is required");
+  try {
+    await pool.query(
+      "INSERT INTO links (url, slug, title) VALUES ($1, $2, $3)",
+      [url, slug, title]
+    );
+    res.redirect("/");
+  } catch (error) {
+    if (error.code === "23505") {
+      res.send("❌ Slug already exists. Try another one!");
+    } else {
+      console.error(error);
+      res.send("❌ Database error occurred. Please try again.");
     }
-
-    const slug = customSlug || nanoid(7);
-
-    try {
-        const result = await pool.query(
-            `INSERT INTO links (slug, url, title)
-             VALUES ($1, $2, $3) RETURNING *`,
-            [slug, url, title || null]
-        );
-
-        res.redirect("/");
-    } catch (err) {
-        console.log(err);
-        return res.send("Slug already exists or database error");
-    }
+  }
 });
 
 // ---------------------------
