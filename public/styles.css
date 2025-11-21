@@ -1,0 +1,493 @@
+/* 
+
+
+
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f2f4f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 480px;
+  margin: 40px auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  margin-top: 35px;
+  font-size: 22px;
+  color: #2a2a2a;
+}
+
+
+.form-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  font-size: 15px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4f46e5; 
+}
+
+.btn-primary {
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  border-left: 5px solid #4f46e5;
+}
+
+.card-header {
+  margin-bottom: 8px;
+}
+
+.short-link {
+  font-size: 18px;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.short-link:hover {
+  text-decoration: underline;
+}
+
+.description {
+  color: #555;
+  margin-top: 4px;
+}
+
+.clicks {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+
+.btn-delete {
+  margin-top: 12px;
+  background: #dc2626;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+  font-family: "Inter", sans-serif;
+  background: #f2f4f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+
+.navbar {
+  background: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+
+.form-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  font-size: 15px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+
+.btn-primary {
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+
+.subtitle {
+  margin-top: 35px;
+  font-size: 22px;
+  color: #2a2a2a;
+}
+
+
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 2px solid #4f46e5; 
+  transition: 0.2s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.short-link {
+  font-size: 18px;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.short-link:hover {
+  text-decoration: underline;
+}
+
+.description {
+  color: #555;
+  margin-top: 4px;
+}
+
+.clicks {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+
+ .card-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+
+.btn-copy {
+  background: #10b981;
+  padding:8px 16px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-copy:hover {
+  background: #059669;
+}
+
+
+.btn-delete {
+  background: #dc2626;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+}
+
+
+.footer {
+  text-align: center;
+  margin-top: 35px;
+  padding: 15px;
+  color: #888;
+  font-size: 14px;
+} */
+
+
+
+
+
+/* Global */
+body {
+  font-family: "Inter", sans-serif;
+  background: #f2f4f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+/* Form Box */
+.form-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  font-size: 15px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Primary Button */
+.btn-primary {
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+/* Links Title */
+.subtitle {
+  margin-top: 35px;
+  font-size: 22px;
+  color: #2a2a2a;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 25px;
+  margin-top: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 2px solid #4f46e5;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.short-link {
+  font-size: 18px;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.short-link:hover {
+  text-decoration: underline;
+}
+
+.description {
+  color: #555;
+  margin-top: 4px;
+}
+
+.clicks {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Card Buttons */
+.card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-buttons form {
+  margin: 0;
+  display: inline-block;
+}
+
+
+
+/* Copy Button */
+.btn-copy {
+  background: #10b981;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-copy:hover {
+  background: #059669;
+}
+
+/* Delete Button */
+.btn-delete {
+  background: #dc2626;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 35px;
+  padding: 15px;
+  color: #888;
+  font-size: 14px;
+}

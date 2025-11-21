@@ -1,0 +1,117 @@
+<!-- 
+<html>
+<head>
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Shorten Your URL</h1>
+
+    <form action="/shorten" method="POST" class="form-box">
+      <input name="url" placeholder="https://example.com" required class="input" />
+      <input name="customSlug" placeholder="Custom slug (optional)" class="input" />
+      <input name="title" placeholder="Title (optional)" class="input" />
+
+      <button type="submit" class="btn-primary">Create Short Link</button>
+    </form>
+
+    <h2 class="subtitle">Your Links</h2>
+
+    <% links.forEach(link => { %>
+      <div class="card">
+        <div class="card-header">
+          <a href="<%= base %>/<%= link.slug %>" class="short-link" target="_blank">
+            <%= base %>/<%= link.slug %>
+          </a>
+        </div>
+
+        <p class="description"><%= link.title || link.url %></p>
+        <p class="clicks">Clicks: <strong><%= link.clicks %></strong></p>
+
+        <form action="/delete/<%= link.id %>" method="POST">
+          <button class="btn-delete">Delete</button>
+        </form>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html> -->
+
+
+
+
+
+<html>
+<head>
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Shortened..</div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Shorten. Share. Track.</h1>
+      <p>Create clean and simple short links in seconds.</p>
+    </header>
+
+    <!-- Form -->
+    <form action="/shorten" method="POST" class="form-box">
+      <input name="url" placeholder="https://example.com" required class="input" />
+      <input name="customSlug" placeholder="Custom slug (optional)" class="input" />
+      <input name="title" placeholder="Title (optional)" class="input" />
+
+      <button type="submit" class="btn-primary">Create Short Link</button>
+    </form>
+
+    <!-- Links -->
+    <h2 class="subtitle">Your Links</h2>
+
+    <% links.forEach(link => { %>
+      <div class="card">
+
+        <div class="card-header">
+          <a href="<%= base %>/<%= link.slug %>" class="short-link" target="_blank">
+            <%= base %>/<%= link.slug %>
+          </a>
+        </div>
+
+        <p class="description"><%= link.title || link.url %></p>
+        <p class="clicks">Clicks: <strong><%= link.clicks %></strong></p>
+
+        <div class="card-buttons">
+
+          <button 
+            class="btn-copy"
+            type="button"
+            onclick="navigator.clipboard.writeText('<%= base %>/<%= link.slug %>')"
+          >
+            Copy
+          </button>
+
+          <form action="/delete/<%= link.id %>" method="POST">
+            <button class="btn-delete">Delete</button>
+          </form>
+
+        </div>
+
+      </div>
+    <% }) %>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Made with ❤️ by You
+    </footer>
+
+  </div>
+</body>
+</html>
