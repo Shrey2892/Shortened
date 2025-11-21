@@ -97,14 +97,23 @@
           >
             Copy
           </button> -->
-          <button 
+          <!-- <button 
   class="btn-copy"
   type="button"
   data-url="<%= base %>/<%= link.slug %>"
   onclick="copyToClipboard(this)"
 >
   Copy
+</button> -->
+<button 
+  class="btn-copy"
+  type="button"
+  data-url="<%- base %>/<%- link.slug %>"
+  onclick="copyToClipboard(this)"
+>
+  Copy
 </button>
+
 
 
 
@@ -140,10 +149,11 @@ function copyToClipboard(btn) {
     })
     .catch(err => {
       console.error("Clipboard failed:", err);
-      alert("Failed to copy. Try manually.");
+      alert("Failed to copy.");
     });
 }
 </script>
+
 
 
 </body>
